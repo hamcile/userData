@@ -5,6 +5,7 @@ class User:
         self.age = age
 
     def greet(self):
+        """returns a greeting with the user name and age when ever it is called."""
         return f"Hello! my name is {self.name} and I am {self.age} years old. what about you?"
 
 u1: User = User("John", 16)
