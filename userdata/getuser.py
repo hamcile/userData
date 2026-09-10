@@ -9,9 +9,11 @@ def getUserData() -> list:
     while True:
         try:
             name = input("Enter Your Name: ").strip().lower()
+            if not name or any(char.isdigit() for char in name):
+                raise ValueError
             break
         except ValueError:
-            print("Enter a Valid Name.")
+            print("Enter a Valid Name (Letters only, no numbers).")
     while True:
         try: 
             age = int(input("Enter Your Age: "))

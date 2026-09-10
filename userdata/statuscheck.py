@@ -1,4 +1,5 @@
 from getuser import getUserData, userData #type: ignore
+import time
 
 
 
@@ -13,6 +14,7 @@ def checkUserStatus():
             print ("LETS GET YOUR REGISTERED.")
             getUserData()
             print("Your details have been saved successfully.\n")
+            time.sleep(3)
             print("ARE YOU A NEW USER?")
         elif checkSatus == "no":
             print("You Are a Member Already, Glad To See You Again.")
@@ -25,7 +27,7 @@ def main():
     checkUserStatus()
     print(len(userData))
     for user in userData:
-        print (user.greet())
+        print (user.email)
 
 main()
     
